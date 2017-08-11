@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="2" type="collection">
+        <element label="new field 1" max_length="40" name="new_field_1" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Request type" mandatory="true" max_length="40" name="u_choice_3" type="string">
+            <choice>
+                <element label="Human Resources" sequence="0" value="hr"/>
+                <element label="FAC" sequence="1" value="fac"/>
+            </choice>
+        </element>
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
